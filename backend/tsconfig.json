@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+       "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "target": "ES6",              // or "ES2015"
+    "module": "ESNext",              // or "ESNext" for top-level await, etc.
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    
+  }
+}
