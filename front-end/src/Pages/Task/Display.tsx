@@ -25,6 +25,7 @@ const Display = () => {
       setcount(1);
       if (result !== 'no data') {
         settask_2(result)
+        setres('')
       }
       else {
         setres('You have not set any tasks yet')

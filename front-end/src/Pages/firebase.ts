@@ -6,14 +6,14 @@ import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } fr
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB-vEKHrlwsSt4MRL7-taeqT1PKrWjhivU",
-  authDomain: "practice-32441.firebaseapp.com",
-  databaseURL: "https://practice-32441-default-rtdb.firebaseio.com",
-  projectId: "practice-32441",
-  storageBucket: "practice-32441.firebasestorage.app",
-  messagingSenderId: "293771923831",
-  appId: "1:293771923831:web:3977720cfc41c87dab1172",
-  measurementId: "G-W7RV41N75T"
+  apiKey: import.meta.env.FIREBASE_API_KEY,
+  authDomain: import.meta.env.FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.FIREBASE_APP_ID,
+  measurementId: import.meta.env.FIREBASE_MEASUREMENT_ID
 };
 
 initializeApp(firebaseConfig);

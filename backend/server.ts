@@ -10,7 +10,7 @@ import { Remove } from './Remove.ts';
 
 const app = express();
 app.use(cors({
-  origin: 'http://localhost:5173', // your frontend URL
+   // your frontend URL
   credentials: true               // allow cookies
 }));
 app.use(express.json())
