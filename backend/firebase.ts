@@ -21,11 +21,15 @@ const serviceAccount = {
 }
 ;
 
+
+
+  try {
   admin.initializeApp({
-   credential: admin.credential.cert(serviceAccount as admin.ServiceAccount),
+    credential: admin.credential.cert(serviceAccount as admin.ServiceAccount),
   });
-
-
+} catch (error) {
+  console.error("Firebase Admin init failed:", error);
+}
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,

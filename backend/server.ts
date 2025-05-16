@@ -11,7 +11,7 @@ import { Remove } from './Remove.ts';
 const app = express();
 app.use(cors({
    // your frontend URL
-  credentials: true               // allow cookies
+  credentials: true               
 }));
 app.use(express.json())
 app.use(cookieParser());

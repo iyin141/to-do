@@ -6,6 +6,7 @@ import Hero_2 from "../assets/Hero_2.png";
 const Home = () => {
   const inputStyle = "border-2  pt-2 pb-2 pl-5 pr-5 mb-4 text-[1.2rem] rounded-[5px]";
   const navigate = useNavigate();
+  
   return (
     <div className="p-8 flex justify-around gap-5 flex-wrap">
        <div>
