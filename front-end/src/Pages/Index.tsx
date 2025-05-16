@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom"
+import Hero_2 from "../assets/Hero_2.png";
+
 
 
 const Home = () => {
@@ -7,7 +9,7 @@ const Home = () => {
   return (
     <div className="p-8 flex justify-around gap-5 flex-wrap">
        <div>
-        <img src="./src/assets/Hero_2.png" className="md:h-[50vh] lg:h-[70vh] max-sm:h-[40vh] w-[100%]" alt=""/>
+        <img src={Hero_2} className="md:h-[50vh] lg:h-[70vh] max-sm:h-[40vh] w-[100%]" alt=""/>
       </div>
       <div className="flex flex-col gap-6 text-center pt-12">
         <h1 className="text-[2.5rem] font-bold">To-do List</h1>
