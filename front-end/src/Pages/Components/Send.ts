@@ -1,6 +1,6 @@
 export async function send(data:string) {
     try {
-      const response = await fetch('http://localhost:5001/login', {
+      const response = await fetch('https://to-do-344h.onrender.com/login', {
         method: 'Post',
         headers: {
           'Content-type': 'application/json'
@@ -25,7 +25,7 @@ export async function send(data:string) {
 
   export async function send_2(data:object) {
     try {
-      const response = await fetch('http://localhost:5001/task', {
+      const response = await fetch('https://to-do-344h.onrender.com/task', {
         method: 'Post',
         headers: {
           'Content-type': 'application/json'
@@ -50,7 +50,7 @@ export async function send(data:string) {
   
   export async function get(uid:string) {
     try {
-      const response = await fetch('http://localhost:5001/get', {
+      const response = await fetch('https://to-do-344h.onrender.com/get', {
         method: 'Post',
         headers: {
           'Content-type': 'application/json'
@@ -75,7 +75,7 @@ export async function send(data:string) {
     
   export async function update(data:object) {
     try {
-      const response = await fetch('http://localhost:5001/update', {
+      const response = await fetch('https://to-do-344h.onrender.com/update', {
         method: 'Post',
         headers: {
           'Content-type': 'application/json'
@@ -98,7 +98,7 @@ export async function send(data:string) {
 
   export async function remove(id:string,uid:string) {
     try {
-      const response = await fetch('http://localhost:5001/remove', {
+      const response = await fetch('https://to-do-344h.onrender.com/remove', {
         method: 'Post',
         headers: {
           'Content-type': 'application/json'
