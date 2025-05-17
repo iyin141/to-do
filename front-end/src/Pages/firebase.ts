@@ -24,12 +24,15 @@ const auth = getAuth();
 export const Create = async (email :string , password : string): Promise<string>  => { 
   try {
     const userCredentials = await createUserWithEmailAndPassword(auth, email, password);
-    
+    console.log(userCredentials)
     return "done";
   }
-  catch (error : any) {
-    const errormessage = error.message;
-    return errormessage;
+  catch (error: unknown) {
+    if (error instanceof Error) {
+      // Now TypeScript knows error has .message
+      return error.message;
+    }
+    return "An unknown error occurred";
   }
 }
 
@@ -40,10 +43,11 @@ export const login = async (email: string, password: string): Promise<{message: 
     const data = {message : "done" , value : token}
     return data ;
   }
-  catch (error) {
-    const errormessage = error.message;
-    const data = {message : "failed" , value : errormessage}
-    return data;
+  catch (error: unknown) {
+    if (error instanceof Error) {
+      return { message: "failed", value: error.message };
+    }
+    return { message: "failed", value: "An unknown error occurred" };
   }
 } 
 
