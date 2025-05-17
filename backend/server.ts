@@ -17,10 +17,14 @@ app.use(cors({
 }));
 app.use(express.json())
 app.use(cookieParser());
-const PORT = 5001;
+const PORT = process.env.PORT || 5001;
 
 app.get('/', (_, res) => {
   res.send('Server is working');
+});
+
+app.get("/", (_req, res) => {
+  res.send("Hello from Render!");
 });
 
 app.post('/Login', Login);
@@ -33,7 +37,7 @@ app.post('/update', Update)
 app.post('/remove',Remove)
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on ${PORT}`);
 });
 
 setInterval(() => {
