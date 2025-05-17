@@ -18,6 +18,9 @@ const inputStyle = "border-2 border-gray-300 p-2 mb-4 ";
 
 
 const Update = () => {
+  useEffect(() => {
+    document.title = "Change task";
+  }, []);
     const uid = useAuthStore((s) => s.uid)
     const setToggle_3 = useAuthStore((s) => s.settoggle_3)
     const id = useAuthStore((s) => s.id)

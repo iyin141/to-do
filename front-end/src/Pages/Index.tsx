@@ -1,9 +1,13 @@
 import { useNavigate } from "react-router-dom"
 import Hero_2 from "../assets/Hero_2.png";
+import { useEffect } from "react";
 
 
 
 const Home = () => {
+    useEffect(() => {
+    document.title = "To-do";
+  }, []);
   const inputStyle = "border-2  pt-2 pb-2 pl-5 pr-5 mb-4 text-[1.2rem] rounded-[5px]";
   const navigate = useNavigate();
   

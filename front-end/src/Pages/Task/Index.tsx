@@ -7,6 +7,9 @@ import { useNavigate } from "react-router-dom";
 import Update from "./Update";
 
 const Task = () => {
+  useEffect(() => {
+    document.title = "To-do";
+  }, []);
    const navigate = useNavigate();
   const toggle_2 = useAuthStore((s) => s.toggle_2);
   const toggle_3 = useAuthStore((s) => s.toggle_3)

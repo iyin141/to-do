@@ -4,6 +4,7 @@ import { useAuthStore } from "../Components/Value";
 import { useNavigate } from "react-router-dom";
 import { login } from "../firebase";
 import { send } from "../Components/Send";
+import { useEffect } from "react";
 
 type Formdata = {
   Email: string,
@@ -15,6 +16,9 @@ const inputStyle = "border-2 border-gray-300 p-2 mb-4 ";
 
 
 const Sign = () => {
+  useEffect(() => {
+      document.title = "Sign in";
+    }, []);
    const navigate = useNavigate();
   const [show, setshow] = useState(false)
   const [value, setvalue] = useState("")

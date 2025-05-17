@@ -3,7 +3,7 @@ import { useState } from "react";
 import { X } from 'lucide-react';
 import { useAuthStore } from "../Components/Value";
 import { send_2 } from "../Components/Send";
-
+import { useEffect } from "react";
 
 export type Formdata = {
   Task: string,
@@ -16,6 +16,9 @@ const inputStyle = "border-2 border-gray-300 p-2 mb-4 ";
 
 
 const Form = () => {
+  useEffect(() => {
+      document.title = "Add task";
+    }, []);
   const setToggle_2 = useAuthStore((s) => s.settoggle_2)
   const Uid = useAuthStore((s) => s.uid)
   const [show, setshow] = useState(false)
