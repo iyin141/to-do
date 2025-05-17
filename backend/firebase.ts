@@ -1,10 +1,10 @@
-
+import dotenv from "dotenv";
+dotenv.config();
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,getIdToken } from "firebase/auth";
 import  admin from 'firebase-admin';
 import { getDatabase , ref, set , get ,push, query, orderByChild, equalTo , update ,remove } from "firebase/database";
-import dotenv from "dotenv";
-dotenv.config();
+
 
 const serviceAccount = {
   "type": "service_account",
@@ -27,6 +27,7 @@ const serviceAccount = {
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount as admin.ServiceAccount),
   });
+    
 } catch (error) {
   console.error("Firebase Admin init failed:", error);
 }
@@ -147,13 +148,8 @@ export const delete_task = async (Uid:string,id:string,) => {
   try {
     const db = getDatabase();
     const userpath = 'Tasklogs/' + Uid + '/' + 'Userlogs/' + id 
-
-
     remove(ref(db,userpath))
-       
-  
-
-
+    return { message: 'Task deleted' }
   }
    catch (error: any) {
     console.error("Fetch error:", error.message);

@@ -12,5 +12,7 @@
     "noEmit": true,
     "allowImportingTsExtensions": true,
     
-  }
+  },
+  "include": ["**/*.ts"],              // Compile TypeScript files in the 'src' folder
+  "exclude": ["node_modules"]
 }
