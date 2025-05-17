@@ -26,7 +26,7 @@ const Sign = () => {
   
   async function onsubmit(data:Formdata) {
     try {
-      const response = await fetch('http://localhost:5001/log', {
+      const response = await fetch('https://to-do-344h.onrender.com/log', {
         method: 'Post',
         headers: {
           'Content-type': 'application/json'
